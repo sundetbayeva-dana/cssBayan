@@ -1,23 +1,50 @@
+.block:hover button {
+    display: flex;
+}
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+button:hover {
+    cursor: pointer;
+}
+
 .meme-block {
     transition: height ease-in-out 500ms; /* css3 transition */
     -o-transition: height ease-in-out 500ms;
     -moz-transition: height ease-in-out 500ms;
     -webkit-transition: height ease-in-out 500ms;
+    display: flex;
+    width: calc(100% - 2*30px);
+    flex-wrap: wrap;
+}
+
+.meme-block h2 {
+    width: calc(100% - 35px)
+}
+
+.meme-block button {
+    width: 30px;
+    height: 30px;
 }
 
 .meme-block:target img {
     display: flex;
+    width: 100%;
 }
 
 .meme-block:hover {
     cursor: pointer;
+
 }
 
 .meme-block:hover img {
     display: flex;
+    width: 100%
 }
 
-.meme-block > img {
+.meme-block > img, .meme-block button {
     display: none;
 }
 
