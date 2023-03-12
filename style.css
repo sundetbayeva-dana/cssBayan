@@ -28,12 +28,13 @@ body {
 }
 
 button {
-    display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     background: inherit;
     font-size: 3em;
+    width: 30px;
+    height: 30px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -86,13 +87,9 @@ button:hover {
     cursor: pointer;
 }
 
-.meme-block {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .block:hover .meme-block:not(:hover) img{
-    display: none
+    display: none;
+    animation: ani 2.5s forwards;
 }
 
 .block:hover .meme-block:not(:hover) button {
@@ -108,13 +105,8 @@ button:hover {
     width: calc(100% - 35px)
 }
 
-.meme-block button {
-    width: 30px;
-    height: 30px;
-}
-
 .meme-block:target img {
-    display: flex;
+    display: flex!important;
 }
 
 .meme-block:target button {
@@ -134,15 +126,18 @@ button:hover {
     transform: rotate(45deg);
 }
 
-.meme-block > img, .meme-block button {
-    display: none
+.meme-block img, .meme-block button {
+    display: none;
+    animation: ani 2.5s forwards;
 }
 
 .meme-block a {
     text-decoration: none;
-    color: black
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .meme-block a:hover {
-    opacity: .7
+    color: darkslategray;
 }
