@@ -1,0 +1,35 @@
+.meme-block {
+    transition: height ease-in-out 500ms; /* css3 transition */
+    -o-transition: height ease-in-out 500ms;
+    -moz-transition: height ease-in-out 500ms;
+    -webkit-transition: height ease-in-out 500ms;
+}
+
+.meme-block:target img {
+    display: flex;
+}
+
+.meme-block:hover {
+    cursor: pointer;
+}
+
+.meme-block:hover img {
+    display: flex;
+}
+
+.meme-block > img {
+    display: none;
+}
+
+.meme-block:first-child > img {
+    display: flex;
+}
+
+.meme-block a {
+    text-decoration: none;
+    color: black
+}
+
+.meme-block a:hover {
+    opacity: .7
+}
