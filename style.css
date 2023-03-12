@@ -1,26 +1,107 @@
+body {
+    width: calc(100% - 120px);
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1279px) {
+    body {
+        width: calc(100% - 80px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    body {
+        width: calc(100% - 10px);
+    }
+}
+
 .block:hover button {
     display: flex;
 }
+
+.meme-block:first-child img {
+    display: flex
+}
+
+.meme-block:first-child button {
+    transform: rotate(45deg);
+}
+
 button {
     display: flex;
     align-items: center;
     justify-content: center;
     border: none;
     background: inherit;
-    font-size: 30px;
+    font-size: 3em;
 }
+
+@media screen and (max-width: 1279px) {
+    button {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    button {
+        font-size: 1em;
+    }
+}
+
+img {
+    margin: 20px auto;
+    width: 60%
+}
+
+@media screen and (max-width: 1279px) {
+    img {
+        width: 80%
+    }
+}
+
+@media screen and (max-width: 576px) {
+    img {
+        width: 100%
+    }
+}
+
+h1, h2 {
+    font-size: 3em;
+    margin: 10px 0 0;
+}
+
+@media screen and (max-width: 1279px) {
+    h1, h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h1, h2 {
+        font-size: 1em;
+    }
+}
+
 button:hover {
     cursor: pointer;
 }
 
 .meme-block {
-    transition: height ease-in-out 500ms; /* css3 transition */
-    -o-transition: height ease-in-out 500ms;
-    -moz-transition: height ease-in-out 500ms;
-    -webkit-transition: height ease-in-out 500ms;
     display: flex;
-    width: calc(100% - 2*30px);
     flex-wrap: wrap;
+}
+
+.block:hover .meme-block:not(:hover) img{
+    display: none
+}
+
+.block:hover .meme-block:not(:hover) button {
+    transform: rotate(0deg);
+}
+
+@keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .meme-block h2 {
@@ -34,7 +115,6 @@ button:hover {
 
 .meme-block:target img {
     display: flex;
-    width: 100%;
 }
 
 .meme-block:target button {
@@ -43,12 +123,11 @@ button:hover {
 
 .meme-block:hover {
     cursor: pointer;
-
 }
 
 .meme-block:hover img {
     display: flex;
-    width: 100%
+    animation: ani 2.5s forwards;
 }
 
 .meme-block:hover button {
@@ -56,15 +135,7 @@ button:hover {
 }
 
 .meme-block > img, .meme-block button {
-    display: none;
-}
-
-.meme-block:first-child img {
-    display: flex;
-}
-
-.meme-block:first-child button {
-    transform: rotate(45deg);
+    display: none
 }
 
 .meme-block a {
