@@ -5,6 +5,9 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
+    background: inherit;
+    font-size: 30px;
 }
 button:hover {
     cursor: pointer;
@@ -34,6 +37,10 @@ button:hover {
     width: 100%;
 }
 
+.meme-block:target button {
+    transform: rotate(45deg);
+}
+
 .meme-block:hover {
     cursor: pointer;
 
@@ -44,12 +51,20 @@ button:hover {
     width: 100%
 }
 
+.meme-block:hover button {
+    transform: rotate(45deg);
+}
+
 .meme-block > img, .meme-block button {
     display: none;
 }
 
-.meme-block:first-child > img {
+.meme-block:first-child img {
     display: flex;
+}
+
+.meme-block:first-child button {
+    transform: rotate(45deg);
 }
 
 .meme-block a {
